@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a1029" />
+    <title>GRAM // Star Runner</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="star-field" aria-hidden="true"></div>
+      <header class="topbar">
+        <button class="profile-chip" id="profileButton" aria-label="Player profile">
+          <span class="avatar" id="avatar">S</span>
+          <span><b id="playerName">STAR PILOT</b><small>LVL 08 · ORBITAL</small></span>
+        </button>
+        <button class="pill balance-button" id="balanceButton" aria-label="Open GRAM vault">
+          <span class="gram-mark">G</span><b id="headerBalance">47.32</b><span>GRAM</span>
+        </button>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow"><i></i> SECTOR 03 // LIVE</div>
+        <h1>STAR<br /><em>RUNNER</em></h1>
+        <p>Tap the core. Charge the fleet. Own the void.</p>
+        <div class="status-row"><span>COMBO <b id="combo">×1</b></span><span class="signal"><i></i> LINKED</span></div>
+      </section>
+
+      <section class="game-panel" aria-label="Star runner game">
+        <div class="corner corner-tl"></div><div class="corner corner-tr"></div>
+        <div class="core-rail" aria-hidden="true"><span></span><span></span><span></span></div>
+        <button class="reactor" id="reactor" aria-label="Tap to mine GRAM">
+          <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+          <span class="planet-shadow"></span><span class="planet"></span>
+          <span class="reactor-label">TAP<br />CORE</span>
+        </button>
+        <div class="tap-copy" id="tapCopy">+0.12</div>
+        <div class="energy"><div><span>CORE ENERGY</span><b id="energyText">68 / 100</b></div><div class="meter"><i id="energyMeter"></i></div></div>
+        <div class="corner corner-bl"></div><div class="corner corner-br"></div>
+      </section>
+
+      <section class="mission-card">
+        <div class="mission-icon">✦</div>
+        <div class="mission-copy"><span>DAILY SIGNAL</span><b id="missionTitle">Run 42 more jumps</b><small id="missionProgress">8 / 50 complete</small></div>
+        <button id="claimButton">CLAIM<br /><strong>+3.20 G</strong></button>
+      </section>
+
+      <section class="stats-grid">
+        <article><span>MINED TODAY</span><b id="minedToday">12.84 <small>G</small></b><i class="up">↗ 18.6%</i></article>
+        <article><span>RANK</span><b>#4,928</b><i>TOP 12%</i></article>
+      </section>
+
+      <nav class="dock" aria-label="Game tabs">
+        <button class="active" data-tab="RUN"><span>⌁</span>RUN</button>
+        <button data-tab="RIGS"><span>▣</span>RIGS</button>
+        <button data-tab="QUESTS"><span>◇</span>QUESTS</button>
+        <button data-tab="VAULT"><span>◈</span>VAULT</button>
+      </nav>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
