@@ -12,7 +12,7 @@ const state = {
 
 const el = (id) => document.getElementById(id)
 const format = (value) => value.toFixed(2)
-const toast = (message) => {
+const toast w= (message) => {
 	const node = el("toast")
 	node.textContent = message
 	node.classList.add("show")
